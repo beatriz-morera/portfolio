@@ -1,0 +1,23 @@
+.container {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  background: #0f0f0f;
+  color: #fff;
+  padding: 20px 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  z-index: 10;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.menu li {
+  margin-left: 70px;
+}
