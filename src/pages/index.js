@@ -2,10 +2,11 @@ import React from "react"
 import Typical from "react-typical"
 import { Sugar } from "react-preloaders"
 import { motion } from "framer-motion"
+import { ArrowDownOutlined } from "@ant-design/icons"
 import SEO from "../components/seo"
 
 import Header from "../components/Header"
-import { container, item, rightEnter, bottomEnter } from "../services/motion"
+import { container, rightEnter, bottomEnter } from "../services/motion"
 import classes from "./Home.module.css"
 
 const IndexPage = () => (
@@ -29,7 +30,6 @@ const IndexPage = () => (
               className={classes.titleContainer}
               variants={rightEnter}
             >
-              <h1 className={classes.preposition}>a</h1>
               <h1 className={classes.title}>Front-end</h1>
             </motion.div>
             <motion.h1 className={classes.subtitle} variants={bottomEnter}>
@@ -37,10 +37,10 @@ const IndexPage = () => (
             </motion.h1>
           </div>
         </div>
-        <motion.div
-          className={classes.divider}
-          variants={bottomEnter}
-        ></motion.div>
+        <motion.div className={classes.divider} variants={bottomEnter}>
+          <p>Scroll</p>
+          <ArrowDownOutlined />
+        </motion.div>
       </section>
       <div className={classes.row}>
         <div className={classes.info}>

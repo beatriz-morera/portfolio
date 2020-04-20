@@ -11,13 +11,6 @@ export const container = {
   },
 }
 
-export const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-}
 const transition = {
   duration: 2,
   ease: [0.43, 0.13, 0.23, 0.96],
