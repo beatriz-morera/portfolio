@@ -1,69 +1,50 @@
-import React from "react"
-import Typical from "react-typical"
-import { Sugar } from "react-preloaders"
-import { motion } from "framer-motion"
-import { ArrowDownOutlined } from "@ant-design/icons"
-import SEO from "../components/seo"
+import React from 'react'
 
-import Header from "../components/Header"
-import { container, rightEnter, bottomEnter } from "../services/motion"
-import classes from "./Home.module.css"
+import SEO from '../components/seo'
+
+import { Sugar } from 'react-preloaders'
+import { motion } from 'framer-motion'
+
+import Header from '../components/Header'
+import HomeHero from '../components/HomeHero'
+import { container } from '../services/motion'
+import classes from './Home.module.css'
 
 const IndexPage = () => (
   <>
-    <SEO title="Beatriz ML" />
-    <Header />
-    <motion.main
-      variants={container}
-      initial="exit"
-      animate="enter"
-      className={classes.container}
-    >
-      <section className={classes.introduction}>
-        <div className={classes.introductionRow}>
-          <motion.div className={classes.greetings} variants={rightEnter}>
-            <p>HELLO!</p>
-            <Typical steps={["", 4000, "I'm Beatriz", 10000]} wrapper="h1" />
-          </motion.div>
-          <div className={classes.intro}>
-            <motion.div
-              className={classes.titleContainer}
-              variants={rightEnter}
-            >
-              <h1 className={classes.title}>Front-end</h1>
-            </motion.div>
-            <motion.h1 className={classes.subtitle} variants={bottomEnter}>
-              Developer
-            </motion.h1>
+    <>
+      <SEO title="Beatriz ML" />
+      <Header />
+      <motion.main
+        variants={container}
+        initial="exit"
+        animate="enter"
+        className={classes.container}
+      >
+        <HomeHero />
+        <div className={classes.row}>
+          <div className={classes.info}>
+            <h1 className={classes.projectName}>About Cooking</h1>
+            <p>View on GitHub</p>
           </div>
+          <div className={classes.first}></div>
         </div>
-        <motion.div className={classes.divider} variants={bottomEnter}>
-          <p>Scroll</p>
-          <ArrowDownOutlined />
-        </motion.div>
-      </section>
-      <div className={classes.row}>
-        <div className={classes.info}>
-          <h1 className={classes.projectName}>About Cooking</h1>
-          <p>View on GitHub</p>
+        <div className={classes.row}>
+          <div className={classes.info}>
+            <h1 className={classes.projectName}>Lyrics Finder</h1>
+            <p>View on GitHub</p>
+          </div>
+          <div className={classes.second}></div>
         </div>
-        <div className={classes.first}></div>
-      </div>
-      <div className={classes.row}>
-        <div className={classes.info}>
-          <h1 className={classes.projectName}>Lyrics Finder</h1>
-          <p>View on GitHub</p>
+        <div className={classes.row}>
+          <div className={classes.info}>
+            <h1 className={classes.projectName}>Shows Explorer</h1>
+            <p>View on GitHub</p>
+          </div>
+          <div className={classes.third}></div>
         </div>
-        <div className={classes.second}></div>
-      </div>
-      <div className={classes.row}>
-        <div className={classes.info}>
-          <h1 className={classes.projectName}>Shows Explorer</h1>
-          <p>View on GitHub</p>
-        </div>
-        <div className={classes.third}></div>
-      </div>
-    </motion.main>
+      </motion.main>
+    </>
     <Sugar background="#0f0f0f" color="white" customLoading={false} />
   </>
 )

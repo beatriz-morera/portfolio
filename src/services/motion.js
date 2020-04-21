@@ -4,8 +4,8 @@ export const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 0.99,
-      when: "beforeChildren",
+      delay: 0.9,
+      when: 'beforeChildren',
       staggerChildren: 0.9,
     },
   },
@@ -22,9 +22,9 @@ export const rightEnter = {
 }
 
 export const bottomEnter = {
-  exit: { y: "100%", opacity: 0, transition },
+  exit: { y: '100%', opacity: 0, transition },
   enter: {
-    y: "0%",
+    y: '0%',
     opacity: 1,
     transition: { delay: 2, ...transition },
   },

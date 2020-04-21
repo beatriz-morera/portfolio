@@ -4,104 +4,32 @@ body {
   letter-spacing: 1px;
   margin: 0;
   padding: 0;
+  background: #0f0f0f;
+  color: #fff;
 }
 
 .container {
-  background: #0f0f0f;
-  padding: 0 150px 0;
-  color: #fff;
+  padding: 0 20px 0;
 }
-.introduction {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.introductionRow,
 .row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 100px 0;
-}
-.introductionRow {
-  flex: 1;
-  padding: 50px 0 0;
-}
-.greetings p {
-  margin: 120px 0 15px;
-  font-size: 30px;
-  color: #333;
-}
-.greetings h1 {
-  font-size: 50px;
-  margin: 0;
-}
-.divider {
-  font-size: 16px;
-  border-bottom: 15px solid #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  padding-bottom: 30px;
-  margin-bottom: 50px;
-  animation: pulse 1s infinite alternate;
-}
-@keyframes pulse {
-  0% {
-    color: #0f0f0f;
-  }
-  100% {
-    color: #fff;
-  }
-}
-.titleContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: baseline;
-}
-
-.title,
-.subtitle {
-  text-align: right;
-  margin: 0;
-}
-.title {
-  margin-left: 30px;
-  font-size: 120px;
-  color: #0f0f0f;
-  text-shadow: -1px 0 0 #9e9e9e, 0 1px 0 #9e9e9e, 1px 0 0 #9e9e9e,
-    0 -1px 0 #9e9e9e;
-}
-.subtitle {
-  font-size: 180px;
-}
-.intro {
-  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  padding: 50px 0;
 }
 
 .info {
-  flex: 1;
-  margin-right: 50px;
-  height: 500px;
-  border-bottom: 0.3px solid #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .projectName {
   font-size: 35px;
+  margin: 0;
 }
 .first,
 .second,
 .third {
-  flex: 2;
-  max-width: 1000px;
-  height: 500px;
+  min-height: 200px;
   text-align: center;
 }
 
@@ -122,4 +50,48 @@ body {
 }
 .third:hover {
   background: rgb(184, 135, 11);
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 100px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .info {
+    flex: 1;
+    height: 500px;
+    margin-right: 50px;
+    border-bottom: 0.3px solid #fff;
+  }
+  .first,
+  .second,
+  .third {
+    flex: 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 150px 0;
+  }
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .info {
+    flex: 1;
+    height: 500px;
+    margin-right: 50px;
+    border-bottom: 0.3px solid #fff;
+  }
+  .first,
+  .second,
+  .third {
+    flex: 2;
+  }
 }
