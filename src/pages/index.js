@@ -6,6 +6,7 @@ import { Sugar } from 'react-preloaders'
 import { motion } from 'framer-motion'
 
 import Header from '../components/Header'
+import Menu from '../components/Menu'
 import HomeHero from '../components/HomeHero'
 import { container } from '../services/motion'
 import classes from './Home.module.css'
@@ -14,7 +15,9 @@ const IndexPage = () => (
   <>
     <>
       <SEO title="Beatriz ML" />
+
       <Header />
+      <Menu links={['About.', 'Portfolio.', 'Contact.']} />
       <motion.main
         variants={container}
         initial="exit"

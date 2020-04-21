@@ -11,7 +11,8 @@
   align-items: baseline;
   z-index: 10;
 }
-h1 {
+
+.title {
   font-size: 20px;
 }
 .menu {
@@ -33,7 +34,7 @@ li {
 li:after {
   border-radius: 1em;
   border-top: 0.1em solid #ffffff;
-  content: "";
+  content: '';
   position: absolute;
   right: 100%;
   bottom: 0.14em;

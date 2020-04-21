@@ -1,13 +1,11 @@
-import React from "react"
+import React from 'react'
 
-import classes from "./Header.module.css"
+import classes from './Header.module.css'
 
 const Header = () => {
   return (
     <header className={classes.container}>
-      <div className={classes.title}>
-        <h1>BML</h1>
-      </div>
+      <h1 className={classes.title}>BML</h1>
       <ul className={classes.menu}>
         <li>About</li>
         <li>Portfolio</li>

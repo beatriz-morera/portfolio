@@ -1,0 +1,15 @@
+.item {
+  margin: 0;
+  margin: 0 0 10px 60px;
+  display: flex;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.textPlaceholder {
+  color: #0f0f0f;
+  flex: 1;
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: underline;
+}
