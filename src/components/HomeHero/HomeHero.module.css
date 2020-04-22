@@ -29,7 +29,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   animation: pulse 1s infinite alternate;
 }
 @keyframes pulse {
@@ -86,7 +86,7 @@
   }
   .divider {
     padding-bottom: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 }
 @media (min-width: 1024px) {
