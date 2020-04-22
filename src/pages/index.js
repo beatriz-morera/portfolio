@@ -9,8 +9,8 @@ import { container } from '../services/motion'
 import Header from '../components/Header'
 import Menu from '../components/Menu'
 import HomeHero from '../components/HomeHero'
-import Row from '../components/Row'
 import About from '../containers/About'
+import Portfolio from '../containers/Portfolio'
 import Contact from '../containers/Contact'
 import Footer from '../components/Footer'
 
@@ -20,7 +20,6 @@ const IndexPage = () => (
   <>
     <>
       <SEO title="Beatriz ML" />
-
       <Header />
       <Menu links={['About.', 'Portfolio.', 'Contact.']} />
       <motion.main
@@ -31,7 +30,7 @@ const IndexPage = () => (
       >
         <HomeHero />
         <About />
-        <Row title="About Cooking" />
+        <Portfolio />
         <Contact />
         <Footer />
       </motion.main>

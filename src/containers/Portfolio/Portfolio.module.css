@@ -1,0 +1,39 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0 0;
+}
+.row h2 {
+  font-size: 50px;
+  margin: 20px 0 0;
+}
+.row h5 {
+  text-transform: uppercase;
+  margin-top: 15px;
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  .row h2 {
+    font-size: 80px;
+    text-align: right;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .row h2 {
+    font-size: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .row h2 {
+    font-size: 150px;
+    line-height: 150px;
+  }
+}
