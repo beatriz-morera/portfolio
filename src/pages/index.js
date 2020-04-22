@@ -10,7 +10,9 @@ import Header from '../components/Header'
 import Menu from '../components/Menu'
 import HomeHero from '../components/HomeHero'
 import Row from '../components/Row'
-import InfoRow from '../components/InfoRow'
+import About from '../containers/About'
+import Contact from '../containers/Contact'
+import Footer from '../components/Footer'
 
 import classes from './Home.module.css'
 
@@ -28,34 +30,10 @@ const IndexPage = () => (
         className={classes.container}
       >
         <HomeHero />
-        <InfoRow
-          title1="About"
-          title2="Skills"
-          content1="I'm a twenty-five years old Front-End Developer living in Barcelona, Spain. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I value simple content structure, clean design patterns, and thoughtful interactions."
-          content2={
-            <ul className={classes.list}>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Sass</li>
-              <li>Ionic</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>Redux Toolkit</li>
-              <li>Gatsby</li>
-              <li>Git</li>
-              <li>Jest</li>
-              <li>Netlify</li>
-              <li>UI Design</li>
-              <li>Photoshop</li>
-            </ul>
-          }
-          actionLabel="Get in touch"
-        />
+        <About />
         <Row title="About Cooking" />
-        <Row title="Lyrics Finder" />
-        <Row title="Shows Explorer" />
-        <Row title="Calorie Calculator" />
+        <Contact />
+        <Footer />
       </motion.main>
     </>
     <Sugar background="#0f0f0f" color="white" customLoading={false} />

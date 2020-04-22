@@ -1,0 +1,25 @@
+.contact {
+  margin-top: 0;
+  max-width: 95%;
+  font-size: 14px;
+  line-height: 26px;
+  color: #9e9e9e;
+}
+.contact a {
+  text-decoration: none;
+  color: #fff;
+}
+.socialContainer svg {
+  color: #fff;
+  font-size: 30px;
+  margin: 20px 30px 0 0;
+}
+@media (min-width: 1024px) {
+  .contact {
+    max-width: 80%;
+    font-size: 16px;
+  }
+  .socialContainer svg {
+    margin-top: 0;
+  }
+}

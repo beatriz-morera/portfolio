@@ -55,13 +55,22 @@ export default ({ links = [] }) => (
           <a
             target="_blank"
             href="https://www.linkedin.com/in/beatriz-morera-l%C3%B3pez-2a53441a3/"
+            rel="noopener noreferrer"
           >
             <LinkedinFilled className={classes.icon} />
           </a>
-          <a target="_blank" href="https://dribbble.com/beatriz-morera">
+          <a
+            target="_blank"
+            href="https://dribbble.com/beatriz-morera"
+            rel="noopener noreferrer"
+          >
             <DribbbleOutlined className={classes.icon} />
           </a>
-          <a target="_blank" href="https://github.com/beatriz-morera">
+          <a
+            target="_blank"
+            href="https://github.com/beatriz-morera"
+            rel="noopener noreferrer"
+          >
             <GithubFilled className={classes.icon} />
           </a>
         </motion.div>

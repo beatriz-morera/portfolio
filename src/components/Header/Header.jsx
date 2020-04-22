@@ -7,9 +7,9 @@ const Header = () => {
     <header className={classes.container}>
       <h1 className={classes.title}>BML</h1>
       <ul className={classes.menu}>
-        <li>About</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li className={classes.item}>About</li>
+        <li className={classes.item}>Portfolio</li>
+        <li className={classes.item}>Contact</li>
       </ul>
     </header>
   )
