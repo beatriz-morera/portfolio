@@ -5,7 +5,8 @@ import classes from './Footer.module.css'
 const Footer = () => {
   return (
     <footer className={classes.footer}>
-      <div>BeatrizML © 2020</div>
+      <div className={classes.copyright}>BeatrizML©2020</div>
+      <button>Download CV</button>
     </footer>
   )
 }

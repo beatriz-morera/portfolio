@@ -27,11 +27,14 @@
   }
 }
 @media (min-width: 1024px) {
+  .portfolio {
+    padding-bottom: 50px;
+  }
   .row h2 {
     font-size: 100px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .row h2 {
     font-size: 150px;
     line-height: 150px;

@@ -5,7 +5,7 @@ import classes from './Portfolio.module.css'
 
 const Portfolio = () => {
   return (
-    <section>
+    <section className={classes.portfolio}>
       <div className={classes.row}>
         <h5>Portfolio</h5>
         <h2>
