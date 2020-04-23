@@ -9,9 +9,9 @@ import {
 import InfoRow from '../../components/InfoRow'
 import classes from './Contact.module.css'
 
-const Contact = () => {
+export default React.forwardRef((_, ref) => {
   return (
-    <section>
+    <section ref={ref}>
       <InfoRow
         title1="Contact"
         title2="Connect"
@@ -56,6 +56,4 @@ const Contact = () => {
       />
     </section>
   )
-}
-
-export default Contact
+})

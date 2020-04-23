@@ -2,14 +2,16 @@ import React from 'react'
 
 import classes from './Header.module.css'
 
-const Header = () => {
+const Header = ({ items = [] }) => {
   return (
     <header className={classes.container}>
       <h1 className={classes.title}>BML</h1>
       <ul className={classes.menu}>
-        <li className={classes.item}>About</li>
-        <li className={classes.item}>Portfolio</li>
-        <li className={classes.item}>Contact</li>
+        {items.map(([title, clickHandlder]) => (
+          <li key={title} className={classes.item} onClick={clickHandlder}>
+            {title}
+          </li>
+        ))}
       </ul>
     </header>
   )

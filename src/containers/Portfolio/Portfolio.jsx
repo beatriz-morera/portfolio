@@ -3,9 +3,9 @@ import React from 'react'
 import Row from '../../components/Row'
 import classes from './Portfolio.module.css'
 
-const Portfolio = () => {
+export default React.forwardRef((_, ref) => {
   return (
-    <section className={classes.portfolio}>
+    <section className={classes.portfolio} ref={ref}>
       <div className={classes.row}>
         <h5>Portfolio</h5>
         <h2>
@@ -15,6 +15,4 @@ const Portfolio = () => {
       <Row title="About Cooking" />
     </section>
   )
-}
-
-export default Portfolio
+})

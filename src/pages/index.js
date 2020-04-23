@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import SEO from '../components/seo'
 
@@ -16,27 +16,47 @@ import Footer from '../components/Footer'
 
 import classes from './Home.module.css'
 
-const IndexPage = () => (
-  <>
+const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop)
+
+const IndexPage = () => {
+  const aboutRef = useRef(null)
+  const portfolioRef = useRef(null)
+  const contactRef = useRef(null)
+
+  return (
     <>
-      <SEO title="Beatriz ML" />
-      <Header />
-      <Menu links={['About.', 'Portfolio.', 'Contact.']} />
-      <motion.main
-        variants={container}
-        initial="exit"
-        animate="enter"
-        className={classes.container}
-      >
-        <HomeHero />
-        <About />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </motion.main>
+      <>
+        <SEO title="Beatriz ML" />
+        <Header
+          items={[
+            ['About', () => scrollToRef(aboutRef)],
+            ['Portfolio', () => scrollToRef(portfolioRef)],
+            ['Contact', () => scrollToRef(contactRef)],
+          ]}
+        />
+        <Menu
+          links={[
+            ['About.', () => scrollToRef(aboutRef)],
+            ['Portfolio.', () => scrollToRef(portfolioRef)],
+            ['Contact.', () => scrollToRef(contactRef)],
+          ]}
+        />
+        <motion.main
+          variants={container}
+          initial="exit"
+          animate="enter"
+          className={classes.container}
+        >
+          <HomeHero />
+          <About ref={aboutRef} />
+          <Portfolio ref={portfolioRef} />
+          <Contact ref={contactRef} />
+          <Footer />
+        </motion.main>
+      </>
+      <Sugar background="#0f0f0f" color="white" customLoading={false} />
     </>
-    <Sugar background="#0f0f0f" color="white" customLoading={false} />
-  </>
-)
+  )
+}
 
 export default IndexPage

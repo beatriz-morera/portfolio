@@ -51,7 +51,7 @@ export default ({ links = [] }) => {
       ref={containerRef}
     >
       <motion.div className={classes.background} variants={sidebar} />
-      <Navigation links={links} />
+      <Navigation links={links} close={() => toggleOpen()} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   )

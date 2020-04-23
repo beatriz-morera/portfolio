@@ -34,7 +34,7 @@ const itemVariants = {
     },
   },
 }
-export default ({ links = [] }) => (
+export default ({ links = [], close }) => (
   <>
     <motion.div variants={itemVariants} className={classes.line}>
       BML
@@ -48,8 +48,13 @@ export default ({ links = [] }) => (
     </motion.div>
     <motion.div variants={variants} className={classes.container}>
       <motion.ul className={classes.list} variants={variants}>
-        {links.map(title => (
-          <MenuItem key={title} title={title} />
+        {links.map(([title, clickHandler]) => (
+          <MenuItem
+            key={title}
+            title={title}
+            onSelect={clickHandler}
+            onClose={close}
+          />
         ))}
         <motion.div className={classes.socialContainer} variants={itemVariants}>
           <a

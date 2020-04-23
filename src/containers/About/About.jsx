@@ -6,9 +6,9 @@ import { bottomEnter } from '../../services/motion'
 import InfoRow from '../../components/InfoRow'
 import classes from './About.module.css'
 
-const About = () => {
+export default React.forwardRef((_, ref) => {
   return (
-    <motion.section variants={bottomEnter}>
+    <motion.section variants={bottomEnter} ref={ref}>
       <InfoRow
         title1="About"
         title2="Skills"
@@ -35,6 +35,4 @@ const About = () => {
       />
     </motion.section>
   )
-}
-
-export default About
+})

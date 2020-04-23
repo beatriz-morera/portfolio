@@ -1,7 +1,7 @@
-import * as React from "react"
-import { motion } from "framer-motion"
+import * as React from 'react'
+import { motion } from 'framer-motion'
 
-import classes from "./menu-item.module.css"
+import classes from './menu-item.module.css'
 
 const variants = {
   open: {
@@ -20,9 +20,14 @@ const variants = {
   },
 }
 
-export default ({ title }) => {
+export default ({ title, onSelect, onClose }) => {
+  const clickHandler = React.useCallback(() => {
+    onSelect()
+    onClose()
+  }, [onSelect, onClose])
   return (
     <motion.li
+      onClick={clickHandler}
       className={classes.item}
       variants={variants}
       whileHover={{ scale: 1.1 }}
