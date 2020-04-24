@@ -16,7 +16,7 @@ import Footer from '../components/Footer'
 
 import classes from './Home.module.css'
 
-const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop)
+const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop - 110)
 
 const IndexPage = () => {
   const aboutRef = useRef(null)
