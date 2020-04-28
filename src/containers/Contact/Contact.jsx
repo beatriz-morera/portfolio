@@ -19,9 +19,9 @@ export default React.forwardRef((_, ref) => {
           <p className={classes.contact}>
             Interested in discussing a project or partnership? Simply want to
             have a chat? You'll find me in Barcelona, Spain — call{' '}
-            <a href="tel:+34655686927">+34 6 556 869 27</a> or send a mail to{' '}
-            <a href="mailto:beatrizmorera2016@gmail.com">
-              beatrizmorera2016@gmail.com
+            <a href="tel:+34655686927">+34 6 556 869 27</a> or email me at{' '}
+            <a href="mailto:morerabeatriz@outlook.com">
+              morerabeatriz@outlook.com
             </a>
             .
           </p>
@@ -52,7 +52,7 @@ export default React.forwardRef((_, ref) => {
           </div>
         }
         actionLabel="Email me"
-        link="mailto:beatrizmorera2016@gmail.com"
+        link="mailto:morerabeatriz@outlook.com"
       />
     </section>
   )

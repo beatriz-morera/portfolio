@@ -41,3 +41,8 @@
     padding: 100px 0;
   }
 }
+@media (min-width: 1024px) {
+  .footer {
+    padding: 130px 0;
+  }
+}

@@ -14,7 +14,7 @@ import Portfolio from '../containers/Portfolio'
 import Contact from '../containers/Contact'
 import Footer from '../components/Footer'
 
-import classes from './Home.module.css'
+import classes from './index.module.css'
 
 const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop - 110)
 

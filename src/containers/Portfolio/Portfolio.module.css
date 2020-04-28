@@ -13,17 +13,42 @@
   letter-spacing: 4px;
   font-size: 16px;
 }
+.background1,
+.background2,
+.background3,
+.background4 {
+  min-height: 200px;
+  height: 100%;
+}
+
+.background1 {
+  background: #191a1d;
+}
+.background2 {
+  background: #6b0d7d;
+}
+.background3 {
+  background: #feb706;
+}
+.background4 {
+  background: #40c3ff;
+}
 
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 20px;
   }
   .row h2 {
     font-size: 80px;
     text-align: right;
     margin: 0;
+  }
+  .background1,
+  .background2,
+  .background3,
+  .background4 {
+    min-height: 400px;
   }
 }
 @media (min-width: 1024px) {

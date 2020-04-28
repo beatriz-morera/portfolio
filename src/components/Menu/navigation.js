@@ -39,11 +39,11 @@ export default ({ links = [], close }) => (
     <motion.div variants={itemVariants} className={classes.line}>
       BML
       <motion.a
-        href="mailto:beatrizmorera2016@gmail.com"
+        href="mailto:morerabeatriz@outlook.com"
         className={classes.email}
         variants={itemVariants}
       >
-        beatrizmorera2016@gmail.com
+        morerabeatriz@outlook.com
       </motion.a>
     </motion.div>
     <motion.div variants={variants} className={classes.container}>

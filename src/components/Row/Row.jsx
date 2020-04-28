@@ -1,15 +1,28 @@
 import React from 'react'
 
+import { ArrowRightOutlined } from '@ant-design/icons'
+
 import classes from './Row.module.css'
 
-const Row = ({ title }) => {
+const Row = ({ title, subtitle, content, link }) => {
   return (
     <div className={classes.row}>
       <div className={classes.info}>
-        <h1 className={classes.title}>{title}</h1>
-        <p>View on GitHub</p>
+        <div>
+          <h1 className={classes.title}>{title}</h1>
+          <p className={classes.subtitle}>{subtitle}</p>
+        </div>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.actionContainer}
+          href={link}
+        >
+          <p>Learn More</p>
+          <ArrowRightOutlined />
+        </a>
       </div>
-      <div className={classes.rightCol}></div>
+      <div className={classes.rightCol}>{content}</div>
     </div>
   )
 }

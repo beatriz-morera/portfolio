@@ -15,7 +15,12 @@ const InfoRow = ({ title1, title2, content1, content2, actionLabel, link }) => {
       <div className={classes.rightCol}>
         <h5 className={classes.title}>{title2}</h5>
         <div>{content2}</div>
-        <a className={classes.actionContainer} href={link}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.actionContainer}
+          href={link}
+        >
           <p>{actionLabel}</p>
           <ArrowRightOutlined />
         </a>
