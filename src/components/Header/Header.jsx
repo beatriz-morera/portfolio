@@ -1,20 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-import classes from './Header.module.css'
 
-function useShowHeader() {
-  const [show, setShow] = useState(true)
-  const scrollY = useRef(0)
-  useEffect(() => {
-    function handler() {
-      setShow(scrollY.current > window.scrollY)
-      scrollY.current = window.scrollY
-    }
-    window.addEventListener('scroll', handler)
-    return () => window.removeEventListener('scroll', handler)
-  }, [])
-  return show
-}
+import { useShowHeader } from '../../hooks/scroll'
+import { scrollToTop } from '../../services/scroll'
+import classes from './Header.module.css'
 
 const Header = ({ items = [] }) => {
   const showHeader = useShowHeader()
@@ -26,7 +15,9 @@ const Header = ({ items = [] }) => {
       initial={{ opacity: 0 }}
       transition={{ opacity: { duration: 0.3 } }}
     >
-      <h1 className={classes.title}>BML</h1>
+      <h1 className={classes.title} onClick={scrollToTop}>
+        BML
+      </h1>
       <ul className={classes.menu}>
         {items.map(([title, clickHandlder]) => (
           <li key={title} className={classes.item} onClick={clickHandlder}>

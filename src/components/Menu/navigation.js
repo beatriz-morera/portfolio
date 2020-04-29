@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useCallback } from 'react'
 
 import { motion } from 'framer-motion'
 import {
@@ -7,7 +7,9 @@ import {
   DribbbleOutlined,
 } from '@ant-design/icons'
 
+import { scrollToTop } from '../../services/scroll'
 import MenuItem from './menu-item'
+
 import classes from './navigation.module.css'
 
 const variants = {
@@ -34,52 +36,64 @@ const itemVariants = {
     },
   },
 }
-export default ({ links = [], close }) => (
-  <>
-    <motion.div variants={itemVariants} className={classes.line}>
-      BML
-      <motion.a
-        href="mailto:morerabeatriz@outlook.com"
-        className={classes.email}
-        variants={itemVariants}
-      >
-        morerabeatriz@outlook.com
-      </motion.a>
-    </motion.div>
-    <motion.div variants={variants} className={classes.container}>
-      <motion.ul className={classes.list} variants={variants}>
-        {links.map(([title, clickHandler]) => (
-          <MenuItem
-            key={title}
-            title={title}
-            onSelect={clickHandler}
-            onClose={close}
-          />
-        ))}
-        <motion.div className={classes.socialContainer} variants={itemVariants}>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/beatriz-morera-l%C3%B3pez-2a53441a3/"
-            rel="noopener noreferrer"
+
+export default ({ links = [], close }) => {
+  const scrollHandler = useCallback(() => {
+    scrollToTop()
+    close()
+  }, [close])
+  return (
+    <>
+      <motion.div variants={itemVariants} className={classes.line}>
+        <motion.h1 variants={itemVariants} onClick={scrollHandler}>
+          BML
+        </motion.h1>
+        <motion.a
+          href="mailto:morerabeatriz@outlook.com"
+          className={classes.email}
+          variants={itemVariants}
+        >
+          morerabeatriz@outlook.com
+        </motion.a>
+      </motion.div>
+      <motion.div variants={variants} className={classes.container}>
+        <motion.ul className={classes.list} variants={variants}>
+          {links.map(([title, clickHandler]) => (
+            <MenuItem
+              key={title}
+              title={title}
+              onSelect={clickHandler}
+              onClose={close}
+            />
+          ))}
+          <motion.div
+            className={classes.socialContainer}
+            variants={itemVariants}
           >
-            <LinkedinFilled className={classes.icon} />
-          </a>
-          <a
-            target="_blank"
-            href="https://dribbble.com/beatriz-morera"
-            rel="noopener noreferrer"
-          >
-            <DribbbleOutlined className={classes.icon} />
-          </a>
-          <a
-            target="_blank"
-            href="https://github.com/beatriz-morera"
-            rel="noopener noreferrer"
-          >
-            <GithubFilled className={classes.icon} />
-          </a>
-        </motion.div>
-      </motion.ul>
-    </motion.div>
-  </>
-)
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/beatriz-morera-l%C3%B3pez-2a53441a3/"
+              rel="noopener noreferrer"
+            >
+              <LinkedinFilled className={classes.icon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://dribbble.com/beatriz-morera"
+              rel="noopener noreferrer"
+            >
+              <DribbbleOutlined className={classes.icon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/beatriz-morera"
+              rel="noopener noreferrer"
+            >
+              <GithubFilled className={classes.icon} />
+            </a>
+          </motion.div>
+        </motion.ul>
+      </motion.div>
+    </>
+  )
+}

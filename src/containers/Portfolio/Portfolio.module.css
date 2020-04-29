@@ -22,16 +22,16 @@
 }
 
 .background1 {
-  background: #191a1d8c;
+  background: #35353521;
 }
 .background2 {
-  background: #6a0d7d8c;
+  background: #6a0d7d21;
 }
 .background3 {
-  background: #feb8068c;
+  background: #feb80621;
 }
 .background4 {
-  background: #40c3ff8c;
+  background: #40c3ff21;
 }
 
 @media (min-width: 768px) {

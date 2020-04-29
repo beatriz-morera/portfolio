@@ -1,6 +1,5 @@
 .container {
   box-sizing: border-box;
-  position: fixed;
   width: 100%;
   background: #0f0f0f;
   color: #fff;
@@ -45,6 +44,7 @@
 
 @media (min-width: 768px) {
   .container {
+    position: fixed;
     padding: 30px 100px;
   }
   .menu {

@@ -13,28 +13,28 @@ export default React.forwardRef((_, ref) => {
         relativePath: { eq: "shows-explorer-hero.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       lyricsFinderImage: file(relativePath: { eq: "lyrics-finder-hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       aboutCookingImage: file(relativePath: { eq: "about-cooking-hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       todayTodosImage: file(relativePath: { eq: "today-todos-hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
