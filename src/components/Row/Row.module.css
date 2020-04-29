@@ -55,7 +55,7 @@
   }
   .rightCol {
     flex: 2;
-    min-height: 400px;
+    min-height: 350px;
   }
 
   .subtitle {

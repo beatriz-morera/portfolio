@@ -6,7 +6,7 @@ import { bottomEnter } from '../../services/motion'
 import InfoRow from '../../components/InfoRow'
 import classes from './About.module.css'
 
-export default React.forwardRef((_, ref) => {
+export default React.forwardRef(({ scrollTo }, ref) => {
   return (
     <motion.section variants={bottomEnter} ref={ref}>
       <InfoRow
@@ -31,7 +31,9 @@ export default React.forwardRef((_, ref) => {
             <li>Photoshop</li>
           </ul>
         }
+        showHyperlink={false}
         actionLabel="Get in touch"
+        scrollTo={scrollTo}
       />
     </motion.section>
   )

@@ -4,7 +4,16 @@ import { ArrowRightOutlined } from '@ant-design/icons'
 
 import classes from './InfoRow.module.css'
 
-const InfoRow = ({ title1, title2, content1, content2, actionLabel, link }) => {
+const InfoRow = ({
+  title1,
+  title2,
+  content1,
+  content2,
+  actionLabel,
+  link,
+  scrollTo,
+  showHyperlink = true,
+}) => {
   return (
     <div className={classes.row}>
       <div className={classes.leftCol}>
@@ -15,15 +24,22 @@ const InfoRow = ({ title1, title2, content1, content2, actionLabel, link }) => {
       <div className={classes.rightCol}>
         <h5 className={classes.title}>{title2}</h5>
         <div>{content2}</div>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes.actionContainer}
-          href={link}
-        >
-          <p>{actionLabel}</p>
-          <ArrowRightOutlined />
-        </a>
+        {showHyperlink ? (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.actionContainer}
+            href={link}
+          >
+            <p>{actionLabel}</p>
+            <ArrowRightOutlined />
+          </a>
+        ) : (
+          <div className={classes.actionContainer} onClick={scrollTo}>
+            <p>{actionLabel}</p>
+            <ArrowRightOutlined />
+          </div>
+        )}
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import SEO from '../components/seo'
 
 import { Sugar } from 'react-preloaders'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import { motion } from 'framer-motion'
 import { container } from '../services/motion'
 
@@ -25,7 +26,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <>
+      <ParallaxProvider>
         <SEO title="Beatriz ML" />
         <Header
           items={[
@@ -48,12 +49,12 @@ const IndexPage = () => {
           className={classes.container}
         >
           <HomeHero />
-          <About ref={aboutRef} />
+          <About ref={aboutRef} scrollTo={() => scrollToRef(contactRef)} />
           <Portfolio ref={portfolioRef} />
           <Contact ref={contactRef} />
           <Footer />
         </motion.main>
-      </>
+      </ParallaxProvider>
       <Sugar background="#0f0f0f" color="white" customLoading={false} />
     </>
   )

@@ -3,6 +3,9 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
+import { motion } from 'framer-motion'
+import { Parallax } from 'react-scroll-parallax'
+
 import Row from '../../components/Row'
 import classes from './Portfolio.module.css'
 
@@ -13,28 +16,28 @@ export default React.forwardRef((_, ref) => {
         relativePath: { eq: "shows-explorer-hero.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       lyricsFinderImage: file(relativePath: { eq: "lyrics-finder-hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       aboutCookingImage: file(relativePath: { eq: "about-cooking-hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       todayTodosImage: file(relativePath: { eq: "today-todos-hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -55,9 +58,16 @@ export default React.forwardRef((_, ref) => {
         subtitle="TV shows finder & saver"
         link="https://github.com/beatriz-morera/shows-explorer"
         content={
-          <div className={classes.background1}>
-            <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
-          </div>
+          <motion.div
+            className={classes.background1}
+            whileHover={{ scale: [1, 0.9] }}
+          >
+            <motion.div whileHover={{ scale: [1, 1.2] }}>
+              <Parallax y={[30, -30]}>
+                <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
+              </Parallax>
+            </motion.div>
+          </motion.div>
         }
       />
       <Row
@@ -65,9 +75,16 @@ export default React.forwardRef((_, ref) => {
         subtitle="Lyrics finder & saver"
         link="https://github.com/beatriz-morera/lyrics-finder"
         content={
-          <div className={classes.background2}>
-            <Img fluid={data.lyricsFinderImage.childImageSharp.fluid} />
-          </div>
+          <motion.div
+            className={classes.background2}
+            whileHover={{ scale: [1, 0.9] }}
+          >
+            <motion.div whileHover={{ scale: [1, 1.2] }}>
+              <Parallax y={[30, -30]}>
+                <Img fluid={data.lyricsFinderImage.childImageSharp.fluid} />
+              </Parallax>
+            </motion.div>
+          </motion.div>
         }
       />
       <Row
@@ -75,9 +92,16 @@ export default React.forwardRef((_, ref) => {
         subtitle="Recipes finder & saver"
         link="https://github.com/beatriz-morera/about-cooking"
         content={
-          <div className={classes.background3}>
-            <Img fluid={data.aboutCookingImage.childImageSharp.fluid} />
-          </div>
+          <motion.div
+            className={classes.background3}
+            whileHover={{ scale: [1, 0.9] }}
+          >
+            <motion.div whileHover={{ scale: [1, 1.2] }}>
+              <Parallax y={[30, -30]}>
+                <Img fluid={data.aboutCookingImage.childImageSharp.fluid} />
+              </Parallax>
+            </motion.div>
+          </motion.div>
         }
       />
       <Row
@@ -85,9 +109,16 @@ export default React.forwardRef((_, ref) => {
         subtitle="Todo list"
         link="https://github.com/beatriz-morera/todo-app"
         content={
-          <div className={classes.background4}>
-            <Img fluid={data.todayTodosImage.childImageSharp.fluid} />
-          </div>
+          <motion.div
+            className={classes.background4}
+            whileHover={{ scale: [1, 0.9] }}
+          >
+            <motion.div whileHover={{ scale: [1, 1.2] }}>
+              <Parallax y={[30, -30]}>
+                <Img fluid={data.todayTodosImage.childImageSharp.fluid} />
+              </Parallax>
+            </motion.div>
+          </motion.div>
         }
       />
     </section>
