@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `portfolio`,
-        short_name: `portfolio`,
+        name: `BeatrizML Portfolio`,
+        short_name: `BeatrizML Portfolio`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
