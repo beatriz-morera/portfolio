@@ -25,7 +25,7 @@ const IndexPage = () => {
 
   return (
     <ParallaxProvider>
-      <SEO title="Beatriz ML" />
+      <SEO />
       <Header
         items={[
           ['About', () => scrollToRef(aboutRef)],

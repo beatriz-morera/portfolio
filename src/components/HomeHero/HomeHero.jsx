@@ -13,7 +13,7 @@ const HomeHero = () => {
       <div className={classes.row}>
         <motion.div className={classes.greetings} variants={rightEnter}>
           <p>HELLO!</p>
-          <Typical steps={['', 2000, "I'm Beatriz", 10000]} wrapper="h1" />
+          <Typical steps={['', 1000, "I'm Beatriz", 10000]} wrapper="h1" />
         </motion.div>
         <div className={classes.intro}>
           <motion.h1 variants={rightEnter} className={classes.title}>
