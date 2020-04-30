@@ -1,14 +1,11 @@
 import React from 'react'
 
-import { motion } from 'framer-motion'
-import { bottomEnter } from '../../services/motion'
-
 import InfoRow from '../../components/InfoRow'
 import classes from './About.module.css'
 
 export default React.forwardRef(({ scrollTo }, ref) => {
   return (
-    <motion.section variants={bottomEnter} ref={ref}>
+    <section ref={ref}>
       <InfoRow
         title1="About"
         title2="Skills"
@@ -35,6 +32,6 @@ export default React.forwardRef(({ scrollTo }, ref) => {
         actionLabel="Get in touch"
         scrollTo={scrollTo}
       />
-    </motion.section>
+    </section>
   )
 })

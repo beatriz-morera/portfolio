@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 
 import SEO from '../components/seo'
 
-import { Sugar } from 'react-preloaders'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { motion } from 'framer-motion'
 import { container } from '../services/motion'
@@ -25,38 +24,35 @@ const IndexPage = () => {
   const contactRef = useRef(null)
 
   return (
-    <>
-      <ParallaxProvider>
-        <SEO title="Beatriz ML" />
-        <Header
-          items={[
-            ['About', () => scrollToRef(aboutRef)],
-            ['Portfolio', () => scrollToRef(portfolioRef)],
-            ['Contact', () => scrollToRef(contactRef)],
-          ]}
-        />
-        <Menu
-          links={[
-            ['About.', () => scrollToRef(aboutRef)],
-            ['Portfolio.', () => scrollToRef(portfolioRef)],
-            ['Contact.', () => scrollToRef(contactRef)],
-          ]}
-        />
-        <motion.main
-          variants={container}
-          initial="exit"
-          animate="enter"
-          className={classes.container}
-        >
-          <HomeHero />
-          <About ref={aboutRef} scrollTo={() => scrollToRef(contactRef)} />
-          <Portfolio ref={portfolioRef} />
-          <Contact ref={contactRef} />
-          <Footer />
-        </motion.main>
-      </ParallaxProvider>
-      <Sugar background="#0f0f0f" color="white" customLoading={false} />
-    </>
+    <ParallaxProvider>
+      <SEO title="Beatriz ML" />
+      <Header
+        items={[
+          ['About', () => scrollToRef(aboutRef)],
+          ['Portfolio', () => scrollToRef(portfolioRef)],
+          ['Contact', () => scrollToRef(contactRef)],
+        ]}
+      />
+      <Menu
+        links={[
+          ['About.', () => scrollToRef(aboutRef)],
+          ['Portfolio.', () => scrollToRef(portfolioRef)],
+          ['Contact.', () => scrollToRef(contactRef)],
+        ]}
+      />
+      <motion.main
+        variants={container}
+        initial="exit"
+        animate="enter"
+        className={classes.container}
+      >
+        <HomeHero />
+        <About ref={aboutRef} scrollTo={() => scrollToRef(contactRef)} />
+        <Portfolio ref={portfolioRef} />
+        <Contact ref={contactRef} />
+        <Footer />
+      </motion.main>
+    </ParallaxProvider>
   )
 }
 
