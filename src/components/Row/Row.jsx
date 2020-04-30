@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
 import { ArrowRightOutlined } from '@ant-design/icons'
 
 import classes from './Row.module.css'
@@ -21,8 +22,16 @@ const Row = ({ title, subtitle, list = [], content, link }) => {
           className={classes.actionContainer}
           href={link}
         >
-          <p>View on GitHub</p>
-          <ArrowRightOutlined />
+          <motion.div
+            whileHover={{
+              marginRight: '25px',
+              marginLeft: '25px',
+              transition: { duration: 0.4 },
+            }}
+          >
+            <p>View on GitHub</p>
+            <ArrowRightOutlined />
+          </motion.div>
         </a>
       </div>
       <div className={classes.rightCol}>{content}</div>

@@ -74,9 +74,11 @@ export default React.forwardRef((_, ref) => {
         content={
           <motion.div
             className={classes.background1}
-            whileHover={{ scale: [1, 0.9] }}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div whileHover={{ scale: [1, 1.2] }}>
+            <motion.div
+              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
+            >
               <Parallax y={[30, -30]}>
                 <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
               </Parallax>
@@ -97,9 +99,11 @@ export default React.forwardRef((_, ref) => {
         content={
           <motion.div
             className={classes.background2}
-            whileHover={{ scale: [1, 0.9] }}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div whileHover={{ scale: [1, 1.2] }}>
+            <motion.div
+              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
+            >
               <Parallax y={[30, -30]}>
                 <Img fluid={data.lyricsFinderImage.childImageSharp.fluid} />
               </Parallax>
@@ -121,9 +125,11 @@ export default React.forwardRef((_, ref) => {
         content={
           <motion.div
             className={classes.background3}
-            whileHover={{ scale: [1, 0.9] }}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div whileHover={{ scale: [1, 1.2] }}>
+            <motion.div
+              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
+            >
               <Parallax y={[30, -30]}>
                 <Img fluid={data.aboutCookingImage.childImageSharp.fluid} />
               </Parallax>
@@ -145,9 +151,11 @@ export default React.forwardRef((_, ref) => {
         content={
           <motion.div
             className={classes.background4}
-            whileHover={{ scale: [1, 0.9] }}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div whileHover={{ scale: [1, 1.2] }}>
+            <motion.div
+              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
+            >
               <Parallax y={[30, -30]}>
                 <Img fluid={data.todayTodosImage.childImageSharp.fluid} />
               </Parallax>

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
 import { ArrowRightOutlined } from '@ant-design/icons'
 
 import classes from './InfoRow.module.css'
@@ -31,8 +32,16 @@ const InfoRow = ({
             className={classes.hyperlinkContainer}
             href={link}
           >
-            <p>{actionLabel}</p>
-            <ArrowRightOutlined />
+            <motion.div
+              whileHover={{
+                marginRight: '25px',
+                marginLeft: '25px',
+                transition: { duration: 0.4 },
+              }}
+            >
+              <p>{actionLabel}</p>
+              <ArrowRightOutlined />
+            </motion.div>
           </a>
         ) : (
           <div
@@ -41,8 +50,16 @@ const InfoRow = ({
             role="button"
             tabIndex={0}
           >
-            <p>{actionLabel}</p>
-            <ArrowRightOutlined />
+            <motion.div
+              whileHover={{
+                marginRight: '25px',
+                marginLeft: '25px',
+                transition: { duration: 0.4 },
+              }}
+            >
+              <p>{actionLabel}</p>
+              <ArrowRightOutlined />
+            </motion.div>
           </div>
         )}
       </div>
