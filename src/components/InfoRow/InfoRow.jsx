@@ -35,7 +35,12 @@ const InfoRow = ({
             <ArrowRightOutlined />
           </a>
         ) : (
-          <div className={classes.scrollToContainer} onClick={scrollTo}>
+          <div
+            className={classes.scrollToContainer}
+            onClick={scrollTo}
+            role="button"
+            tabIndex={0}
+          >
             <p>{actionLabel}</p>
             <ArrowRightOutlined />
           </div>

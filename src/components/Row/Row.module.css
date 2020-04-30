@@ -11,6 +11,11 @@
 .subtitle {
   color: #9e9e9e;
   font-weight: 600;
+  text-transform: uppercase;
+}
+.list {
+  list-style: none;
+  padding: 15px 0 0;
 }
 
 .rightCol {
@@ -26,13 +31,18 @@
 .actionContainer {
   text-decoration: none;
   color: #fff;
-  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   padding-bottom: 20px;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -45,8 +55,7 @@
   }
   .info {
     flex: 1;
-    height: 300px;
-    min-height: 400px;
+    min-height: 420px;
     margin-right: 50px;
   }
   .actionContainer {
@@ -55,10 +64,11 @@
   }
   .rightCol {
     flex: 2;
-    min-height: 350px;
   }
+}
 
-  .subtitle {
-    font-size: 16px;
+@media (min-width: 1440px) {
+  .info {
+    min-height: 450px;
   }
 }

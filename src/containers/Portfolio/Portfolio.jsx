@@ -6,7 +6,15 @@ import Img from 'gatsby-image'
 import { motion } from 'framer-motion'
 import { Parallax } from 'react-scroll-parallax'
 
+import ionicLogo from '../../images/ionic.png'
+import cssLogo from '../../images/css.png'
+import reactLogo from '../../images/react.png'
+import reduxToolkitLogo from '../../images/redux-toolkit.png'
+import typescriptLogo from '../../images/typescript.png'
+
 import Row from '../../components/Row'
+import Icon from '../../components/icon'
+
 import classes from './Portfolio.module.css'
 
 export default React.forwardRef((_, ref) => {
@@ -56,6 +64,12 @@ export default React.forwardRef((_, ref) => {
       <Row
         title="Shows Explorer"
         subtitle="TV shows finder & saver"
+        list={[
+          <Icon name="Ionic" src={ionicLogo} />,
+          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="Typescript" src={typescriptLogo} />,
+        ]}
         link="https://github.com/beatriz-morera/shows-explorer"
         content={
           <motion.div
@@ -73,6 +87,12 @@ export default React.forwardRef((_, ref) => {
       <Row
         title="Lyrics Finder"
         subtitle="Lyrics finder & saver"
+        list={[
+          <Icon name="Ionic" src={ionicLogo} />,
+          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="Typescript" src={typescriptLogo} />,
+        ]}
         link="https://github.com/beatriz-morera/lyrics-finder"
         content={
           <motion.div
@@ -90,6 +110,13 @@ export default React.forwardRef((_, ref) => {
       <Row
         title="About Cooking"
         subtitle="Recipes finder & saver"
+        list={[
+          <Icon name="Ionic" src={ionicLogo} />,
+          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="Typescript" src={typescriptLogo} />,
+          <Icon name="Redux Toolkit" src={reduxToolkitLogo} />,
+        ]}
         link="https://github.com/beatriz-morera/about-cooking"
         content={
           <motion.div
@@ -108,6 +135,13 @@ export default React.forwardRef((_, ref) => {
         title="Today Todos"
         subtitle="Todo list"
         link="https://github.com/beatriz-morera/todo-app"
+        list={[
+          <Icon name="Ionic" src={ionicLogo} />,
+          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="Typescript" src={typescriptLogo} />,
+          <Icon name="Redux Toolkit" src={reduxToolkitLogo} />,
+        ]}
         content={
           <motion.div
             className={classes.background4}
