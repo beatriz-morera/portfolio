@@ -18,7 +18,7 @@ const Row = ({ title, subtitle, content, link }) => {
           className={classes.actionContainer}
           href={link}
         >
-          <p>Learn More</p>
+          <p>View on GitHub</p>
           <ArrowRightOutlined />
         </a>
       </div>

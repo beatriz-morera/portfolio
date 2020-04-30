@@ -28,14 +28,14 @@ const InfoRow = ({
           <a
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.actionContainer}
+            className={classes.hyperlinkContainer}
             href={link}
           >
             <p>{actionLabel}</p>
             <ArrowRightOutlined />
           </a>
         ) : (
-          <div className={classes.actionContainer} onClick={scrollTo}>
+          <div className={classes.scrollToContainer} onClick={scrollTo}>
             <p>{actionLabel}</p>
             <ArrowRightOutlined />
           </div>
