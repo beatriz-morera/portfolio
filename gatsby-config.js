@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `BeatrizML Portfolio`,
+    title: `Beatriz Portfolio`,
     description: `I'm Front-End Developer living in Barcelona, Spain. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I value simple content structure, clean design patterns, and thoughtful interactions.`,
     author: `@beatriz-morera`,
   },
@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `BeatrizML Portfolio`,
-        short_name: `BeatrizML Portfolio`,
+        name: `Beatriz Portfolio`,
+        short_name: `Beatriz Portfolio`,
         start_url: `/`,
-        background_color: `#0f0f0f`,
-        theme_color: `#0f0f0f`,
+        background_color: `#333`,
+        theme_color: `#333`,
         display: `minimal-ui`,
         icon: `src/images/bml-icon.jpg`, // This path is relative to the root of the site.
       },
