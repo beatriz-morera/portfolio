@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { motion, useCycle } from 'framer-motion'
 
 import MenuToggle from './menu-toggle'
@@ -6,52 +6,43 @@ import Navigation from './navigation'
 
 import classes from './index.module.css'
 
-export const useDimensions = ref => {
-  const dimensions = useRef({ width: 0, height: 0 })
-
-  useEffect(() => {
-    dimensions.current.width = ref.current.offsetWidth
-    dimensions.current.height = ref.current.offsetHeight
-  }, [ref])
-
-  return dimensions.current
-}
-
 const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 100% 0px)`,
+  open: {
+    clipPath: `circle(110% at 100% 0px)`,
+    width: '100%',
+    height: '100%',
     transition: {
       type: 'spring',
-      stiffness: 20,
-      restDelta: 2,
+      stiffness: 100,
+      damping: 10,
     },
-  }),
+  },
   closed: {
     clipPath: `circle(80px at 100% 0px)`,
+    width: '80px',
+    height: '80px',
     transition: {
       delay: 0.2,
       type: 'spring',
-      stiffness: 400,
-      damping: 40,
+      stiffness: 100,
+      damping: 20,
     },
   },
 }
 
 export default ({ links = [] }) => {
   const [isOpen, toggleOpen] = useCycle(false, true)
-  const containerRef = useRef(null)
-  const { height } = useDimensions(containerRef)
 
   return (
     <motion.nav
       className={classes.nav}
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
-      custom={height}
-      ref={containerRef}
     >
-      <motion.div className={classes.background} variants={sidebar} />
-      <Navigation links={links} close={() => toggleOpen()} />
+      <motion.div className={classes.background} variants={sidebar}>
+        <Navigation links={links} close={() => toggleOpen()} />
+      </motion.div>
+
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   )

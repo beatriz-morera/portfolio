@@ -21,8 +21,8 @@ module.exports = {
         name: `BeatrizML Portfolio`,
         short_name: `BeatrizML Portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0f0f0f`,
+        theme_color: `#0f0f0f`,
         display: `minimal-ui`,
         icon: `src/images/bml-icon.jpg`, // This path is relative to the root of the site.
       },

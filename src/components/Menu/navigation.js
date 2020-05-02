@@ -14,26 +14,10 @@ import classes from './navigation.module.css'
 
 const variants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-}
-const itemVariants = {
-  open: {
-    y: 0,
     opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
   },
   closed: {
-    y: 50,
     opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
   },
 }
 
@@ -44,14 +28,14 @@ export default ({ links = [], close }) => {
   }, [close])
   return (
     <>
-      <motion.div variants={itemVariants} className={classes.line}>
-        <motion.h1 variants={itemVariants} onClick={scrollHandler}>
+      <motion.div variants={variants} className={classes.line}>
+        <motion.h1 variants={variants} onClick={scrollHandler}>
           BML
         </motion.h1>
         <motion.a
           href="mailto:morerabeatriz@outlook.com"
           className={classes.email}
-          variants={itemVariants}
+          variants={variants}
         >
           morerabeatriz@outlook.com
         </motion.a>
@@ -66,10 +50,7 @@ export default ({ links = [], close }) => {
               onClose={close}
             />
           ))}
-          <motion.div
-            className={classes.socialContainer}
-            variants={itemVariants}
-          >
+          <motion.div className={classes.socialContainer} variants={variants}>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/beatriz-morera-l%C3%B3pez-2a53441a3/"
