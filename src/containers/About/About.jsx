@@ -12,10 +12,11 @@ export default React.forwardRef(({ scrollTo }, ref) => {
         content1="I'm a twenty-five years old Front-End Developer living in Barcelona, Spain. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I value simple content structure, clean design patterns, and thoughtful interactions."
         content2={
           <ul className={classes.list}>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
             <li>Sass</li>
             <li>Ionic</li>
+            <li>Ant Design</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React</li>
