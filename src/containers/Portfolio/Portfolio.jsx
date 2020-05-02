@@ -66,7 +66,7 @@ export default React.forwardRef((_, ref) => {
         subtitle="TV shows finder & saver"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
-          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
           <Icon name="Typescript" src={typescriptLogo} />,
         ]}
@@ -91,7 +91,7 @@ export default React.forwardRef((_, ref) => {
         subtitle="Lyrics finder & saver"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
-          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
           <Icon name="Typescript" src={typescriptLogo} />,
         ]}
@@ -116,7 +116,7 @@ export default React.forwardRef((_, ref) => {
         subtitle="Recipes finder & saver"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
-          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
           <Icon name="Typescript" src={typescriptLogo} />,
           <Icon name="Redux Toolkit" src={reduxToolkitLogo} />,
@@ -143,7 +143,7 @@ export default React.forwardRef((_, ref) => {
         link="https://github.com/beatriz-morera/todo-app"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
-          <Icon name="CSS" src={cssLogo} />,
+          <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
           <Icon name="Typescript" src={typescriptLogo} />,
           <Icon name="Redux Toolkit" src={reduxToolkitLogo} />,
