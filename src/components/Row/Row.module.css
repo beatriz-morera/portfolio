@@ -11,11 +11,12 @@
 .subtitle {
   color: #9e9e9e;
   font-weight: 600;
+  line-height: 25px;
   text-transform: uppercase;
 }
 .list {
   list-style: none;
-  padding: 15px 0 0;
+  padding: 10px 0 0;
 }
 
 .rightCol {
