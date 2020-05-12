@@ -11,6 +11,9 @@ import cssLogo from '../../images/css.png'
 import reactLogo from '../../images/react.png'
 import reduxToolkitLogo from '../../images/redux-toolkit.png'
 import typescriptLogo from '../../images/typescript.png'
+import antLogo from '../../images/ant-design.png'
+import sassLogo from '../../images/sass.png'
+import javascriptLogo from '../../images/javascript.png'
 
 import Row from '../../components/Row'
 import Icon from '../../components/icon'
@@ -23,6 +26,13 @@ export default React.forwardRef((_, ref) => {
       showsExplorerImage: file(
         relativePath: { eq: "shows-explorer-hero.png" }
       ) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      surveyImage: file(relativePath: { eq: "survey-hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -81,6 +91,31 @@ export default React.forwardRef((_, ref) => {
             >
               <Parallax y={[30, -30]}>
                 <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
+              </Parallax>
+            </motion.div>
+          </motion.div>
+        }
+      />
+      <Row
+        title="HEI Social Responsibility"
+        subtitle="Survey Platform"
+        list={[
+          <Icon name="Ant Design" src={antLogo} />,
+          <Icon name="Sass" src={sassLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="JavaScript" src={javascriptLogo} />,
+        ]}
+        showLink={false}
+        content={
+          <motion.div
+            className={classes.background5}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
+            >
+              <Parallax y={[30, -30]}>
+                <Img fluid={data.surveyImage.childImageSharp.fluid} />
               </Parallax>
             </motion.div>
           </motion.div>

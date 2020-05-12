@@ -4,8 +4,9 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.footer button {
+.footer a {
   background: none;
+  text-decoration: none;
   border: none;
   outline: none;
   color: #fff;
@@ -18,7 +19,7 @@
   padding: 0 0 7px;
 }
 
-.footer button:after {
+.footer a:after {
   border-radius: 1em;
   border-top: 0.2em solid #ffffff;
   content: '';
@@ -29,7 +30,7 @@
   transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
 }
 
-.footer button:hover:after {
+.footer a:hover:after {
   right: 0;
 }
 .copyright {
