@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { motion } from 'framer-motion'
-import { Parallax } from 'react-scroll-parallax'
 
 import ionicLogo from '../../images/ionic.png'
 import cssLogo from '../../images/css.png'
@@ -17,6 +16,7 @@ import javascriptLogo from '../../images/javascript.png'
 
 import Row from '../../components/Row'
 import Icon from '../../components/icon'
+import Image from '../../components/image'
 
 import classes from './Portfolio.module.css'
 
@@ -39,13 +39,6 @@ export default React.forwardRef((_, ref) => {
           }
         }
       }
-      lyricsFinderImage: file(relativePath: { eq: "lyrics-finder-hero.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       aboutCookingImage: file(relativePath: { eq: "about-cooking-hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
@@ -54,6 +47,22 @@ export default React.forwardRef((_, ref) => {
         }
       }
       todayTodosImage: file(relativePath: { eq: "today-todos-hero.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      calorieCalculatorImage: file(
+        relativePath: { eq: "calorie-calculator-hero.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      lyricsFinderImage: file(relativePath: { eq: "lyrics-finder-hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -78,7 +87,7 @@ export default React.forwardRef((_, ref) => {
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
-          <Icon name="Typescript" src={typescriptLogo} />,
+          <Icon name="TypeScript" src={typescriptLogo} />,
         ]}
         link="https://github.com/beatriz-morera/shows-explorer"
         content={
@@ -86,13 +95,9 @@ export default React.forwardRef((_, ref) => {
             className={classes.background1}
             whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div
-              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
-            >
-              <Parallax y={[30, -30]}>
-                <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
-              </Parallax>
-            </motion.div>
+            <Image>
+              <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
+            </Image>
           </motion.div>
         }
       />
@@ -111,38 +116,9 @@ export default React.forwardRef((_, ref) => {
             className={classes.background5}
             whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div
-              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
-            >
-              <Parallax y={[30, -30]}>
-                <Img fluid={data.surveyImage.childImageSharp.fluid} />
-              </Parallax>
-            </motion.div>
-          </motion.div>
-        }
-      />
-      <Row
-        title="Lyrics Finder"
-        subtitle="Lyrics PWA Mobile Only"
-        list={[
-          <Icon name="Ionic" src={ionicLogo} />,
-          <Icon name="CSS3" src={cssLogo} />,
-          <Icon name="React" src={reactLogo} />,
-          <Icon name="Typescript" src={typescriptLogo} />,
-        ]}
-        link="https://github.com/beatriz-morera/lyrics-finder"
-        content={
-          <motion.div
-            className={classes.background2}
-            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
-            >
-              <Parallax y={[30, -30]}>
-                <Img fluid={data.lyricsFinderImage.childImageSharp.fluid} />
-              </Parallax>
-            </motion.div>
+            <Image>
+              <Img fluid={data.surveyImage.childImageSharp.fluid} />
+            </Image>
           </motion.div>
         }
       />
@@ -153,7 +129,7 @@ export default React.forwardRef((_, ref) => {
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
-          <Icon name="Typescript" src={typescriptLogo} />,
+          <Icon name="TypeScript" src={typescriptLogo} />,
           <Icon name="Redux Toolkit" src={reduxToolkitLogo} />,
         ]}
         link="https://github.com/beatriz-morera/about-cooking"
@@ -162,13 +138,9 @@ export default React.forwardRef((_, ref) => {
             className={classes.background3}
             whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div
-              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
-            >
-              <Parallax y={[30, -30]}>
-                <Img fluid={data.aboutCookingImage.childImageSharp.fluid} />
-              </Parallax>
-            </motion.div>
+            <Image>
+              <Img fluid={data.aboutCookingImage.childImageSharp.fluid} />
+            </Image>
           </motion.div>
         }
       />
@@ -180,7 +152,7 @@ export default React.forwardRef((_, ref) => {
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
-          <Icon name="Typescript" src={typescriptLogo} />,
+          <Icon name="TypeScript" src={typescriptLogo} />,
           <Icon name="Redux Toolkit" src={reduxToolkitLogo} />,
         ]}
         content={
@@ -188,13 +160,50 @@ export default React.forwardRef((_, ref) => {
             className={classes.background4}
             whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
           >
-            <motion.div
-              whileHover={{ scale: 1.2, transition: { duration: 0.4 } }}
-            >
-              <Parallax y={[30, -30]}>
-                <Img fluid={data.todayTodosImage.childImageSharp.fluid} />
-              </Parallax>
-            </motion.div>
+            <Image>
+              <Img fluid={data.todayTodosImage.childImageSharp.fluid} />
+            </Image>
+          </motion.div>
+        }
+      />
+      <Row
+        title="Daily Calorie Intake Calculator"
+        subtitle="Calorie needs calculator PWA"
+        list={[
+          <Icon name="CSS3" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="JavaScript" src={javascriptLogo} />,
+        ]}
+        link="https://github.com/beatriz-morera/calorie-calculator"
+        content={
+          <motion.div
+            className={classes.background6}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
+          >
+            <Image>
+              <Img fluid={data.calorieCalculatorImage.childImageSharp.fluid} />
+            </Image>
+          </motion.div>
+        }
+      />
+      <Row
+        title="Lyrics Finder"
+        subtitle="Lyrics PWA Mobile Only"
+        list={[
+          <Icon name="Ionic" src={ionicLogo} />,
+          <Icon name="CSS3" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="TypeScript" src={typescriptLogo} />,
+        ]}
+        link="https://github.com/beatriz-morera/lyrics-finder"
+        content={
+          <motion.div
+            className={classes.background2}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
+          >
+            <Image>
+              <Img fluid={data.lyricsFinderImage.childImageSharp.fluid} />
+            </Image>
           </motion.div>
         }
       />

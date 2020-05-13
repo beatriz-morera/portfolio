@@ -18,7 +18,8 @@
 .background2,
 .background3,
 .background4,
-.background5 {
+.background5,
+.background6 {
   min-height: 200px;
   height: 100%;
 }
@@ -38,6 +39,9 @@
 .background5 {
   background: #40a09621;
 }
+.background6 {
+  background: #e6e6e621;
+}
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
@@ -52,7 +56,8 @@
   .background2,
   .background3,
   .background4,
-  .background5 {
+  .background5,
+  .background6 {
     height: 400px;
   }
 }
@@ -67,7 +72,8 @@
   .background2,
   .background3,
   .background4,
-  .background5 {
+  .background5,
+  .background6 {
     min-height: 420px;
   }
 }
@@ -80,7 +86,8 @@
   .background2,
   .background3,
   .background4,
-  .background5 {
+  .background5,
+  .background6 {
     min-height: 450px;
     height: 100%;
   }
