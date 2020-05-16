@@ -17,6 +17,17 @@ body {
   margin-top: -90px;
   padding: 0 20px 0;
 }
+.error {
+  padding: 70px;
+  text-align: center;
+  font-size: 16px;
+}
+.error p {
+  margin-top: 30px;
+}
+.error span {
+  font-weight: 600;
+}
 
 @media (min-width: 768px) {
   .container {

@@ -18,8 +18,7 @@ export default React.forwardRef((_, ref) => {
         content1={
           <p className={classes.contact}>
             Interested in discussing a project or simply want to have a chat?
-            You'll find me in Barcelona, Spain — call{' '}
-            <a href="tel:+34655686927">+34 6 556 869 27</a> or email me at{' '}
+            You'll find me in Barcelona, Spain — email me at{' '}
             <a href="mailto:morerabeatriz@outlook.com">
               morerabeatriz@outlook.com
             </a>

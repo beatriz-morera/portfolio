@@ -18,6 +18,7 @@ import jestLogo from '../../images/jest.png'
 import photoshopLogo from '../../images/photoshop.png'
 import html5Logo from '../../images/html5.png'
 import uiLogo from '../../images/ui.png'
+import motionLogo from '../../images/framer-motion.png'
 
 import classes from './About.module.css'
 
@@ -35,7 +36,7 @@ export default React.forwardRef(({ scrollTo }, ref) => {
             <Icon name="Sass" src={sassLogo} />
             <Icon name="Ionic" src={ionicLogo} />
             <Icon name="Ant Design" src={antLogo} />
-            <Icon name="UI" src={uiLogo} />
+            <Icon name="UI Design" src={uiLogo} />
             <Icon name="JavaScript" src={javascriptLogo} />
             <Icon name="TypeScript" src={typescriptLogo} />
             <Icon name="React" src={reactLogo} />
@@ -45,6 +46,7 @@ export default React.forwardRef(({ scrollTo }, ref) => {
             <Icon name="Jest" src={jestLogo} />
             <Icon name="Netlify" src={netlifyLogo} />
             <Icon name="Photoshop" src={photoshopLogo} />
+            <Icon name="Framer Motion" src={motionLogo} />
           </div>
         }
         showHyperlink={false}

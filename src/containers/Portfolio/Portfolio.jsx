@@ -13,6 +13,8 @@ import typescriptLogo from '../../images/typescript.png'
 import antLogo from '../../images/ant-design.png'
 import sassLogo from '../../images/sass.png'
 import javascriptLogo from '../../images/javascript.png'
+import gatsbyLogo from '../../images/gatsby.png'
+import motionLogo from '../../images/framer-motion.png'
 
 import Row from '../../components/Row'
 import Icon from '../../components/icon'
@@ -40,6 +42,13 @@ export default React.forwardRef((_, ref) => {
         }
       }
       aboutCookingImage: file(relativePath: { eq: "about-cooking-hero.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      galleryImage: file(relativePath: { eq: "gallery-hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -140,6 +149,28 @@ export default React.forwardRef((_, ref) => {
           >
             <Image>
               <Img fluid={data.aboutCookingImage.childImageSharp.fluid} />
+            </Image>
+          </motion.div>
+        }
+      />
+      <Row
+        title="The Hummingbird Art Gallery"
+        subtitle="Gallery Website"
+        list={[
+          <Icon name="Gatsby" src={gatsbyLogo} />,
+          <Icon name="CSS3" src={cssLogo} />,
+          <Icon name="React" src={reactLogo} />,
+          <Icon name="JavaScript" src={javascriptLogo} />,
+          <Icon name="Framer Motion" src={motionLogo} />,
+        ]}
+        link="https://github.com/beatriz-morera/gallery"
+        content={
+          <motion.div
+            className={classes.background7}
+            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
+          >
+            <Image>
+              <Img fluid={data.galleryImage.childImageSharp.fluid} />
             </Image>
           </motion.div>
         }
