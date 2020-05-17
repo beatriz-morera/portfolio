@@ -63,7 +63,7 @@ const IndexPage = () => {
       ) : (
         <div className={classes.error}>
           <img src={rotateIcon} alt="rotate your device" />
-          <p>This site is not available in horizontal mode.</p>
+          <p>This site is not available in landscape mode.</p>
           <span>Please rotate your device.</span>
         </div>
       )}
