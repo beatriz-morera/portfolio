@@ -18,12 +18,13 @@ body {
   padding: 0 20px 0;
 }
 .error {
-  padding: 70px;
+  max-height: 100vh;
+  padding: 60px;
   text-align: center;
   font-size: 16px;
 }
 .error p {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .error span {
   font-weight: 600;

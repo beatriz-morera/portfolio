@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef } from 'react'
 
 import SEO from '../components/seo'
 
@@ -6,7 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import { motion } from 'framer-motion'
 import { container } from '../services/motion'
 
-import { useWindowsSize } from '../hooks/window'
+import { useIsLandscape } from '../hooks/window'
 
 import Header from '../components/Header'
 import Menu from '../components/Menu'
@@ -22,16 +22,7 @@ import classes from './index.module.css'
 const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop - 110)
 
 const IndexPage = () => {
-  const [display, setDisplay] = useState(true)
-  const { width, height } = useWindowsSize()
-
-  useEffect(() => {
-    if (width > height && height < 600) {
-      setDisplay(false)
-    } else {
-      setDisplay(true)
-    }
-  }, [width, height])
+  const display = useIsLandscape()
 
   const aboutRef = useRef(null)
   const portfolioRef = useRef(null)

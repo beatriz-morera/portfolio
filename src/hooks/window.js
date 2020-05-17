@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react'
 
-const getWindowsSize = () => ({
-  width: window.innerWidth,
-  height: window.innerHeight,
-})
+const getWindowsSize = () => {
+  if (typeof window === 'undefined') {
+    return {
+      width: 0,
+      height: 0,
+    }
+  }
+  return {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  }
+}
 
 export function useWindowsSize() {
   const [size, setSize] = useState(getWindowsSize())
@@ -16,4 +24,19 @@ export function useWindowsSize() {
   }, [])
 
   return size
+}
+
+export function useIsLandscape() {
+  const [display, setDisplay] = useState(true)
+  const { width, height } = useWindowsSize()
+
+  useEffect(() => {
+    if (width > height && height < 600) {
+      setDisplay(false)
+    } else {
+      setDisplay(true)
+    }
+  }, [width, height])
+
+  return display
 }
