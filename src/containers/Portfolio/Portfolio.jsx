@@ -91,7 +91,7 @@ export default React.forwardRef((_, ref) => {
       </div>
       <Row
         title="Shows Explorer"
-        subtitle="TV shows explorer PWA Mobile Only"
+        subtitle="TV shows explorer Web App Mobile Only"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
@@ -199,7 +199,7 @@ export default React.forwardRef((_, ref) => {
       />
       <Row
         title="Daily Calorie Intake Calculator"
-        subtitle="Calorie needs calculator PWA"
+        subtitle="Calorie needs calculator"
         list={[
           <Icon name="CSS3" src={cssLogo} />,
           <Icon name="React" src={reactLogo} />,
