@@ -91,7 +91,7 @@ export default React.forwardRef((_, ref) => {
       </div>
       <Row
         title="Shows Explorer"
-        subtitle="TV shows explorer Web App Mobile Only"
+        subtitle="TV shows explorer"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
@@ -133,7 +133,7 @@ export default React.forwardRef((_, ref) => {
       />
       <Row
         title="About Cooking"
-        subtitle="Recipe PWA Mobile Only"
+        subtitle="Recipe PWA"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
@@ -177,7 +177,7 @@ export default React.forwardRef((_, ref) => {
       />
       <Row
         title="Today Todos"
-        subtitle="Todo list PWA Mobile Only"
+        subtitle="Todo list PWA"
         link="https://github.com/beatriz-morera/todo-app"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
@@ -218,8 +218,8 @@ export default React.forwardRef((_, ref) => {
         }
       />
       <Row
-        title="Lyrics Finder"
-        subtitle="Lyrics PWA Mobile Only"
+        title="Lyrics"
+        subtitle="Lyrics finder PWA"
         list={[
           <Icon name="Ionic" src={ionicLogo} />,
           <Icon name="CSS3" src={cssLogo} />,
