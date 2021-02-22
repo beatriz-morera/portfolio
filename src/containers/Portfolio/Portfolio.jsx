@@ -90,27 +90,6 @@ export default React.forwardRef((_, ref) => {
         </h2>
       </div>
       <Row
-        title="Shows Explorer"
-        subtitle="TV shows explorer"
-        list={[
-          <Icon name="Ionic" src={ionicLogo} />,
-          <Icon name="CSS3" src={cssLogo} />,
-          <Icon name="React" src={reactLogo} />,
-          <Icon name="TypeScript" src={typescriptLogo} />,
-        ]}
-        link="https://github.com/beatriz-morera/shows-explorer"
-        content={
-          <motion.div
-            className={classes.background1}
-            whileHover={{ scale: 0.9, transition: { duration: 0.4 } }}
-          >
-            <Image>
-              <Img fluid={data.showsExplorerImage.childImageSharp.fluid} />
-            </Image>
-          </motion.div>
-        }
-      />
-      <Row
         title="HEI Social Responsibility"
         subtitle="Survey Platform"
         list={[
