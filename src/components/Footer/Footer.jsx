@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.copyright}>BeatrizML©2020</div>
       <a
-        href="https://1drv.ms/b/s!AtVfglJsBuRfgQtOiZQaQiuyliGC?e=0rP8sN"
+        href="https://1drv.ms/b/s!AtVfglJsBuRfgRKL-GMb0JIhtOKg?e=M2neaH"
         target="_blank"
         rel="noopener noreferrer"
       >
